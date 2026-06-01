@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Summative</title>
+    <style>
+        /* BASE SYSTEM */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        .site-wrapper {
+            overflow: clip; 
+        }
+
+        /* STICKING */
+        .nav-hud {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0));
+            padding: 25px 40px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .nav-hud h3 { margin: 0; font-size: 1.1em; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #fff; }
+        .nav-hud .assignment-tag { font-size: 0.85em; opacity: 0.4; letter-spacing: 1px; }
+
+        /* VERTICAL CONTAINERS FOR THE BEGINNING AND END */
+        .parallax-vertical-container {
+            position: relative;
+            height: 500vh; 
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+
+        /* SPECIFICALLY FOR KEEPING TEXT IN PLACE!!! */
+        .sticky-text-wrapper {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        /* CHUNKS OF TEXT */ 
+        .story-card {
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #111;
+            padding: 45px 50px;
+            border-radius: 14px;
+            max-width: 580px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            line-height: 1.8;
+            backdrop-filter: blur(12px);
+            box-sizing: border-box;
+        }
+        
+        .story-card h1 { font-size: 2.6em; margin: 0 0 10px 0; font-weight: 800; }
+        .story-card h2 { font-size: 1.6em; margin: 0 0 15px 0; color: #222; font-weight: 700; border-bottom: 2px solid #e5e5e5; padding-bottom: 12px; }
+        .story-card p { font-size: 1.05em; color: #333; margin: 0 0 15px 0; }
+        .story-card p:last-of-type { margin-bottom: 0; }
+        .story-card .rubric-tip { font-size: 0.85em; color: #666; font-style: italic; margin-top: 15px; border-top: 1px dashed #ddd; padding-top: 10px; display: block; }
+
+        /* HORIZONTAL MTR TRACK CODE */
+        .horizontal-scroll-container {
+            height: 400vh; 
+            position: relative;
+        }
+
+        .sticky-viewport {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .horizontal-track {
+            display: flex;
+            width: 400vw; 
+            height: 100vh;
+            will-change: transform;
+            transition: transform 0.1s ease-out; 
+        }
+
+        .panel {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mtr-card {
+            background-color: rgba(255, 255, 255, 0.92);
+            color: #fff;
+            border: 1px solid #ffffff; 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+        }
+        .mtr-card h2 { color: #000000; border-bottom-color: #ffffff; }
+        .mtr-card p { color: #000000; }
+        .mtr-card .rubric-tip { color: #ffffff; border-top-color: #ffffff; }
+
+        /* --- IMAGES & IMAGINARY BACKGROUNDS --- */
+        #act1-tall-skyline { 
+            background-image: url('slide 1.png'); 
+        }
+        
+        #mtr-panel-1 { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('slide 2.png'); }
+        #mtr-panel-2 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('slide 6.png'); }
+        #mtr-panel-3 { background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('slide 3.png'); }
+        #mtr-panel-4 { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('slide 4.png'); }
+        
+        #act3-wide-home { 
+            background-image: url('slide 5.png'); 
+            background-position: bottom center; 
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="site-wrapper">
+
+    <!-- STICKY HUD NAVIGATION -->
+    <div class="nav-hud">
+        <h3>Not a House, But a Home</h3>
+        <div class="assignment-tag">SPACE & PLACE SUMMATIVE</div>
+    </div>
+
+    <!-- MAIN SECTION 1 -->
+    <div class="parallax-vertical-container" id="act1-tall-skyline">
+        <div class="sticky-text-wrapper">
+            <div class="story-card">
+                <p>At three and a half years old, my only concept of the world was the flatter, sprawling landscape of Mainland China—places where the buildings sat low enough to let the sky breathe. But the moment my flight landed in Hong Kong, that familiar horizon was obliterated, instantly replaced by massive unyielding grids that seemed to suffocate the sky. 
+ </p>
+                <p>I remember pressing my face against the car window, straining my neck backwards just to see the tops of those towering concrete buildings disappearing into the overcast sky. There was no warmth or familiarity to this city. It was a cold, intimidating environment—a vast, clinical space where I had zero control or significance, just a small child being transported through an alien space.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MTR SECTION -->
+    <div class="horizontal-scroll-container">
+        <div class="sticky-viewport">
+            <div class="horizontal-track">
+                
+                <!-- MTR Panel 1 -->
+                <div class="panel" id="mtr-panel-1">
+                    <div class="story-card mtr-card">
+                        <p>Everything changed with a single, sharp sound: Beep. That high-pitched electronic chime at the turnstile was the sound of a gate unlocking. The day I held my first octopus card, the city fundamentally shifted. To me, that small piece of plastic wasn't just a travel pass, it was my first real taste of independence. For the first time, I wasn’t just being guided through the city by someone else — I was the one choosing the destination.</p>
+                    </div>
+                </div>
+
+                <!-- MTR Panel 2 -->
+                <div class="panel" id="mtr-panel-2">
+                    <div class="story-card mtr-card">
+                        <p>As I moved through the underground transit network, the initial intimidation of the city faded into a steady rhythm. I watched the station signs blur past the window in constant, repetitive flashes — the red of Tin Hau, the blue of Causeway Bay. These signs were no longer just symbols, but markers on a map I knew by heart. I was no longer lost; I had finally learned how to use the map and navigate the city on my own terms.
+</p>
+                    </div>
+                </div>
+
+                <!-- MTR Panel 3 -->
+                <div class="panel" id="mtr-panel-3">
+                    <div class="story-card mtr-card">
+                        <p>This transition from observer to participant changed how I perceived the city’s scale. Standing in the center of a crowded carriage, I saw the true scale of the city. The noise of the tracks and the quiet, synchronized movement of thousands of commuters were no longer overwhelming; they were simply the routine of life here. As I stood there, taking in my surroundings, I realsied that the city wasn’t a cold, mechanical system, but a collection of people. Being part of that movement, surrounding by others navigating the same grid, made me feel a sense of belonging I hadn’t known before.</p>
+                    </div>
+                </div>
+
+                <!-- MTR Panel 4 -->
+                <div class="panel" id="mtr-panel-4">
+                    <div class="story-card mtr-card">
+                        <p>As I emerged from the station stairs into the daylight, the transformation felt complete. I was no longer blindly navigating a confusing maze; I knew exactly where I was, which street I was stepping on, and where I needed to go. The city was no longer something I was merely being transported through. I had learned the geography, and with that, finally felt a sense of familiarity: a sense of home.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FINAL SECTION -->
+    <div class="parallax-vertical-container" id="act3-wide-home">
+        <div class="sticky-text-wrapper">
+            <div class="story-card">
+                <p>Now, in Year 11, those towering structures that once blocked my sky have completely shifted their meaning. This grid is no longer alien; it’s my life. From the towers that marked my school to the busy streets with shops that I knew by heart — the cold, mechanical geometry I feared as a child has been overwritten with the personal history I built.</p>
+                <p>Just as Darryl looks at the power lines in his backyards and finds a sense of home, I find serenity within the dense, once unfamiliar skyline. As I look out at Hong Kong, I feel a deep, unwavering serenity. This is no longer just a “space”‚ it is a place; it is my home.
+</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- PRECISE SCROLLING SCRIPT -->
+<script>
+    window.addEventListener('scroll', () => {
+        const container = document.querySelector('.horizontal-scroll-container');
+        const track = document.querySelector('.horizontal-track');
+        const rect = container.getBoundingClientRect();
+        
+        if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
+            const scrollableHeight = container.scrollHeight - window.innerHeight;
+            const progress = Math.abs(rect.top) / scrollableHeight;
+            track.style.transform = `translateX(-${progress * 300}vw)`;
+        } 
+        else if (rect.top > 0) {
+            track.style.transform = `translateX(0vw)`;
+        } 
+        else if (rect.bottom < window.innerHeight) {
+            track.style.transform = `translateX(-300vw)`;
+        }
+    });
+</script>
+
+</body>
+</html>
